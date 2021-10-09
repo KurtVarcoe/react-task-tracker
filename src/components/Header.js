@@ -1,8 +1,8 @@
 function Header () {
     return (
-        <header>
+        <header className='header'>
            <h1>Task tracker</h1>
-           <button>Add</button> 
+           <button className='btn'>Add</button> 
         </header>
     );
 }
