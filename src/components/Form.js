@@ -7,7 +7,7 @@ const Form = () => {
             <input type='text' placeholder='Add Day & Time' id='day-time'/>
             <label htmlFor='set-reminder'>Set Reminder</label>
             <input type='checkbox' id='set-reminder'/>
-            <input type='submit'/>
+            <input type='submit' className='btn btn-secondary'/>
         </div>
     )
 }
