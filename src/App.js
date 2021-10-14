@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import Footer from './components/Footer';
-import Form from './components/Form';
+import AddTask from './components/AddTask';
 import { useState } from "react";
 
 const App = () => {
@@ -39,8 +39,8 @@ const App = () => {
   return (
     <div className="container">
       <Header text='Add'/>
-      <Form />
-      <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask}/>
+      <AddTask />
+      {tasks.length > 0 ? <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask}/> : 'No tasks available'}
       <Footer />
     </div>
   );
