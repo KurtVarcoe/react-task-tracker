@@ -26,11 +26,16 @@ const App = () => {
     }
   ])
 
+  // Toggle reminder function
+  const toggleReminder = (id) => {
+    setTasks(tasks.map((task) => task.id === id ? {...task, reminder : !task.reminder} : task));
+  }
+
   return (
     <div className="container">
       <Header text='Add'/>
       <Form />
-      <Tasks tasks={tasks}/>
+      <Tasks tasks={tasks} onToggle={toggleReminder}/>
       <Footer />
     </div>
   );
