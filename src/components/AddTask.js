@@ -24,22 +24,24 @@ const AddTask = ({ onAdd }) => {
 
     return (
         <form onSubmit={onSubmit}>
-            <div>
+            <div className='form-group'>
                 <label htmlFor='add-task'>Task</label>
-                <input type='text' placeholder='Add Task' id='add-task'
+                <input className='form-control' type='text' placeholder='Add Task' id='add-task'
                 value={text} onChange={(e) => setText(e.target.value)}/>
             </div>
-            <div>
+            <div className='form-group'>
                 <label htmlFor='day-time'>Day & Time</label>
-                <input type='text' placeholder='Add Day & Time' id='day-time'
+                <input className='form-control' type='text' placeholder='Add Day & Time' id='day-time'
                 value={day} onChange={(e) => setDay(e.target.value)}/>  
             </div>
-            <div>
-                <label htmlFor='set-reminder'>Set Reminder</label>
-                <input type='checkbox' id='set-reminder' checked={reminder}
+            <div className='form-group form-check'>
+                <label className='form-check-label' htmlFor='set-reminder'>Set Reminder</label>
+                <input className='form-check-input' type='checkbox' id='set-reminder' checked={reminder}
                 value={reminder} onChange={(e) => setReminder(e.currentTarget.checked)}/>
             </div>
-            <input type='submit' value='Save Task' className='btn btn-secondary'/>
+            <div>
+                <input type='submit' value='Save Task' className='btn btn-dark btn-block'/>
+            </div>
         </form>
     )
 }
